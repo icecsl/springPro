@@ -10,6 +10,8 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
     </bean>-->
 
     <bean id="helloService" class="service.impl.HelloWorldServiceImpl">
+        <property name="info" value="hello ice 0909">
+        </property>
     </bean>
 
 </beans>
