@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <!--申明所有的bean 构造器注入-->
+    <bean id="knight" class="base.DI.impl.BraveKnight">
+        <constructor-arg ref="quest" />
+    </bean>
+    <bean id="quest" class="base.DI.impl.SlayDragonQuest"/>
+    <bean id="minstrel" class="base.aop.Minstrel"/>
+
+
+    <!--定义aop-->
+    <!--需要添加包 - aspectjrt-1.8.9.jar,aspectjweaver-1.8.9.jar,spring-aop-4.3.14.RELEASE.jar,spring-aspects-4.1.1.RELEASE.jar-->
+    <aop:config>
+        <aop:aspect ref="minstrel">
+            <!--采用AspectJ的切点表达式语言-->
+            <aop:pointcut id='enbark' expression="execution(* *.embarkOnQuest(..))"/>
+            <!--声明前置通知-->
+            <aop:before method="singBeforeQuest" pointcut-ref="enbark"/>
+            <!--声明后置通知-->
+            <aop:after method="singAfterQuest" pointcut-ref="enbark"/>
+        </aop:aspect>
+    </aop:config>
+
+
+
+
+</beans>
