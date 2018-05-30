@@ -1,4 +1,4 @@
-package base.Chapter_01.aop;
+package base.aop;
 
 /**
  * Created by huangbingjing on 18/5/24.

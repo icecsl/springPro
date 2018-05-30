@@ -1,4 +1,4 @@
-package base.Chapter_01.DI;
+package base.DI;
 
 /**
  * Created by huangbingjing on 18/5/24.

@@ -1,8 +1,8 @@
-package base.Chapter_01.DI.impl;
+package base.DI.impl;
 
 
-import base.Chapter_01.DI.Knight;
-import base.Chapter_01.DI.Quest;
+import base.DI.Knight;
+import base.DI.Quest;
 
 /**
  * Created by huangbingjing on 18/5/24.

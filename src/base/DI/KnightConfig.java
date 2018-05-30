@@ -1,7 +1,7 @@
-package base.Chapter_01.DI;
+package base.DI;
 
-import base.Chapter_01.DI.impl.BraveKnight;
-import base.Chapter_01.DI.impl.SlayDragonQuest;
+import base.DI.impl.BraveKnight;
+import base.DI.impl.SlayDragonQuest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

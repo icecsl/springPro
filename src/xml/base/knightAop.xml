@@ -8,11 +8,11 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
 
 
     <!--申明所有的bean 构造器注入-->
-    <bean id="knight" class="base.Chapter_01.DI.impl.BraveKnight">
+    <bean id="knight" class="base.DI.impl.BraveKnight">
         <constructor-arg ref="quest" />
     </bean>
-    <bean id="quest" class="base.Chapter_01.DI.impl.SlayDragonQuest"/>
-    <bean id="minstrel" class="base.Chapter_01.aop.Minstrel"/>
+    <bean id="quest" class="base.DI.impl.SlayDragonQuest"/>
+    <bean id="minstrel" class="base.aop.Minstrel"/>
 
 
     <!--定义aop-->
