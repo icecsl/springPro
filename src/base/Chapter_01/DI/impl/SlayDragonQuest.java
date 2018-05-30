@@ -1,6 +1,7 @@
-package base.DI.impl;
+package base.Chapter_01.DI.impl;
 
-import base.DI.Quest;
+
+import base.Chapter_01.DI.Quest;
 
 /**
  * Created by huangbingjing on 18/5/24.
