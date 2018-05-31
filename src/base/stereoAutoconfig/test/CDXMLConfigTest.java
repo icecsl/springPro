@@ -19,7 +19,7 @@ import static org.junit.Assert.assertNotNull;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:xml/base/soundsystem.xml")
-public class CDPlayerXMLConfigTest {
+public class CDXMLConfigTest {
 
     @Autowired
     private CompactDisc cd;

@@ -1,6 +1,6 @@
 package base.stereoAutoconfig.test;
 
-import base.stereoAutoconfig.CDPlayerConfig;
+import base.stereoAutoconfig.CDConfig;
 import base.stereoAutoconfig.CompactDisc;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,8 +15,8 @@ import static org.junit.Assert.assertNotNull;
  * Created by huangbingjing on 18/5/30.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=CDPlayerConfig.class)
-public class CDPlayerConfigTest {
+@ContextConfiguration(classes= CDConfig.class)
+public class CDConfigTest {
 
 	@Autowired
 	private CompactDisc compactDisc;
