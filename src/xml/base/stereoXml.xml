@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context">
+
+    <bean id="sgtPeppers" class="base.stereoXmlconfig.impl.SgtPeppers"/>
+
+    <!--构造器注入-->
+    <bean id="cdPlayer" class="base.stereoXmlconfig.impl.CDPlayer">
+        <constructor-arg ref="sgtPeppers"/>
+    </bean>
+
+    <!--使用c空间构造器注入-->
+    <bean id="cdPlayerC" class="base.stereoXmlconfig.impl.CDPlayer"
+          c:cd-ref="sgtPeppers"/>
+
+    <bean id="cdPlayer1" class="base.stereoXmlconfig.impl.CDPlayer"
+          c:_0-ref="sgtPeppers"/>
+
+    <bean id="cDPlayerNoCtor" class="base.stereoXmlconfig.impl.CDPlayerNoCtor">
+        <property name="cd" ref="sgtPeppers"/>
+    </bean>
+
+    <bean id="cDPlayerNoCtor1" class="base.stereoXmlconfig.impl.CDPlayerNoCtor"
+          p:cd-ref="sgtPeppers"/>
+
+
+</beans>
