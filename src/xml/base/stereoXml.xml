@@ -28,5 +28,7 @@
     <bean id="cDPlayerNoCtor1" class="base.stereoXmlconfig.impl.CDPlayerNoCtor"
           p:cd-ref="sgtPeppers"/>
 
+    <bean id="iceCream" class="base.unique.impl.IceCream" primary="true"/>
+
 
 </beans>
