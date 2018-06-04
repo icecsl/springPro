@@ -14,6 +14,7 @@ public class KnightTest {
 		ApplicationContext context = new ClassPathXmlApplicationContext("xml/base/knight.xml");
 		Knight knight = (Knight) context.getBean("knight");
 		knight.embarkOnQuest();
+
 	}
 
 }
