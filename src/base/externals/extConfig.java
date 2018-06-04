@@ -19,7 +19,15 @@ public class ExtConfig {
 	@Bean
 	public BlankDisc disc(){
 		return new BlankDisc(
-				env.getProperty("disc.title"),
-				env.getProperty("disc.artist"));
+				env.getProperty("disc.title","default value"),
+				env.getProperty("disc.artist"), env.getProperty("disc.age", Integer.class, 30));
+	}
+
+	@Bean
+	public BlankDisc disc2(){
+		return new BlankDisc(
+				env.getRequiredProperty("disc.title"),
+				env.getRequiredProperty("disc.artist"),
+				env.getRequiredProperty("disc.age", Integer.class));
 	}
 }

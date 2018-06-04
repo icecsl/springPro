@@ -5,6 +5,8 @@ import base.externals.ExtConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.core.env.Environment;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -16,10 +18,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class ExternalsTest {
 
 	@Autowired
-	private BlankDisc blankDisc;
+//	@Qualifier("disc")
+	@Qualifier("disc2")
+	private BlankDisc disc;
+
+	@Autowired
+	private Environment env;
 
 	@Test
 	public void injectFromProperties(){
-		blankDisc.show();
+		disc.show();
+	}
+
+	@Test
+	public void asClassTest(){
+		Class <BlankDisc> cdClass = env.getPropertyAsClass("disc.class", BlankDisc.class);
 	}
 }
