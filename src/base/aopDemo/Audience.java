@@ -11,22 +11,22 @@ import org.aspectj.lang.annotation.*;
 public class Audience {
 
 	//方式一
-	/*@Before("execution(** base.aopDemo.Performance.perform(..))")
+	/*@Before("execution(** base.aopDemo.PerformanceA.perform(..))")
 	public void silenceCellPhones(){
 		System.out.println("silence Cell Phones");
 	}
 
-	@Before("execution(** base.aopDemo.Performance.perform(..))")
+	@Before("execution(** base.aopDemo.PerformanceA.perform(..))")
 	public void takeSeats(){
 		System.out.println("take Seats");
 	}
 
-	@AfterReturning("execution(** base.aopDemo.Performance.perform(..))")
+	@AfterReturning("execution(** base.aopDemo.PerformanceA.perform(..))")
 	public void applause(){
 		System.out.println("applause");
 	}
 
-	@AfterThrowing("execution(** base.aopDemo.Performance.perform(..))")
+	@AfterThrowing("execution(** base.aopDemo.PerformanceA.perform(..))")
 	public void demandRefund(){
 		System.out.println("demand Refund");
 	}*/

@@ -8,11 +8,11 @@ import org.aspectj.lang.annotation.*;
  * @author: huangbingjing
  * @date: 18/7/30
  */
-@Aspect
+//@Aspect
 public class Audience {
 
 	//方式二-通过@Pointcut声明切点表达式
-	@Pointcut("execution(** base.aopAround.Performance.perform(..))")
+	@Pointcut("execution(** base.aopAround.PerformanceA.perform(..))")
 	public void performance(){
 
 	}

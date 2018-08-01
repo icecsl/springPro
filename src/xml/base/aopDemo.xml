@@ -28,7 +28,19 @@
 
     </aop:config>
 
+    <!--声明环绕通知-->
+    <bean id="audience2" class="base.aopAround.Audience" />
+    <!--<context:component-scan base-package="base.aopAround.impl" />-->
+    <bean id="performanceAImpl" class="base.aopAround.impl.PerformanceAImpl" />
 
+    <aop:config>
+        <aop:aspect ref="audience2">
+            <aop:pointcut id="perform1" expression="execution(* base.aopAround.PerformanceA.perform(..))"/>
+
+            <aop:around method="watchPerformance" pointcut-ref="perform1"/>
+        </aop:aspect>
+
+    </aop:config>
 
 
 

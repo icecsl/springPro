@@ -16,10 +16,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class AopAroundConfigTest {
 
 	@Autowired
-	private Performance performance;
+	private PerformanceA performanceA;
 
 	@Test
 	public void performTest(){
-		performance.perform();
+		performanceA.perform();
 	}
 }

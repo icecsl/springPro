@@ -12,6 +12,6 @@ import org.springframework.stereotype.Component;
 public class PerformanceImpl implements Performance {
 	@Override
 	public void perform() {
-		System.out.println("aopDemo.PerformanceImpl.perform()");
+		System.out.println("aopDemo.PerformanceAImpl.perform()");
 	}
 }

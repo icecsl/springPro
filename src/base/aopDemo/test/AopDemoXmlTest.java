@@ -1,5 +1,6 @@
 package base.aopDemo.test;
 
+import base.aopAround.PerformanceA;
 import base.aopDemo.Performance;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,8 +19,17 @@ public class AopDemoXmlTest {
 	@Autowired
 	private Performance performance;
 
+	@Autowired
+	private PerformanceA performanceA;
+
 	@Test
 	public void performTest(){
 		performance.perform();
 	}
+
+	@Test
+	public void performAroundTest(){
+		performanceA.perform();
+	}
+
 }

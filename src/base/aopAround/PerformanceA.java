@@ -5,6 +5,6 @@ package base.aopAround;
  * @author: huangbingjing
  * @date: 18/7/30
  */
-public interface Performance {
+public interface PerformanceA {
 	void perform();
 }

@@ -1,6 +1,6 @@
 package base.aopDemo;
 
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.Aspect;
 
 /**
  * @Description:切面
